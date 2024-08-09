@@ -24,4 +24,11 @@ t_bool	ft_isspace(const char c);
 t_bool	ft_isupper(const char c);
 t_bool	ft_isxdigit(const char c);
 
+t_bool	ft_str_isalnum(const char *str);
+t_bool	ft_str_isalpha(const char *str);
+t_bool	ft_str_isdigit(const char *str);
+t_bool	ft_str_islower(const char *str);
+t_bool	ft_str_isupper(const char *str);
+t_bool	ft_str_isxdigit(const char *str);
+
 #endif
