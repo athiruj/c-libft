@@ -1,16 +1,16 @@
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+int	ft_strncmp(char *str1, char *str2, size_t n)
 {
-	unsigned char	t1;
-	unsigned char	t2;
+	unsigned char	tmp1;
+	unsigned char	tmp2;
 
-	while ((*s1 || *s2) && n--)
+	while ((*str1 || *str2) && n--)
 	{
-		t1 = (unsigned char)*s1++;
-		t2 = (unsigned char)*s2++;
-		if (t1 != t2)
-			return (t1 - t2);
+		tmp1 = (unsigned char)*str1++;
+		tmp2 = (unsigned char)*str2++;
+		if (tmp1 != tmp2)
+			return (tmp1 - tmp2);
 	}
 	return (0);
 }
