@@ -35,8 +35,10 @@ t_bool	ft_str_isxdigit(const char *str);
 char	*ft_str_tolower(char *str);
 char	*ft_str_toupper(char *str);
 
+void	*ft_memchr(const void *str, int c, size_t n);
 size_t	ft_strlen(const char *str);
 size_t	ft_strnlen(const char *str, size_t n);
 char	*ft_strchr(const char *str, char c);
 char	*ft_strrchr(const char *str, char c);
+
 #endif
