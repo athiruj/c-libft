@@ -36,6 +36,7 @@ char	*ft_str_tolower(char *str);
 char	*ft_str_toupper(char *str);
 
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t count, size_t size);
 void	*ft_memchr(const void *str, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memset(void *str, int c, size_t n);
