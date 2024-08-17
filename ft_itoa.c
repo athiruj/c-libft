@@ -1,8 +1,8 @@
 #include "libft.h"
 
-int	ft_nbrlen(int nbr)
+size_t	ft_nbrlen(int nbr)
 {
-	int	len;
+	size_t	len;
 
 	len = 1;
 	nbr /= 10;
