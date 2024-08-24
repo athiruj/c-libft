@@ -2,11 +2,11 @@
 
 t_bool	ft_is(const char c, const char *set)
 {
-	t_bool	state;
+	t_bool	sta;
 
-	state = False;
+	sta = False;
 	while (*set)
 		if (c == *set++)
 			return (True);
-	return (state);
+	return (sta);
 }

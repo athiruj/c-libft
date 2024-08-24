@@ -2,17 +2,17 @@
 
 int	ft_atoi(char *str)
 {
-	short	reminder;
-	int		result;
+	short	m;
+	int		tmp;
 
-	result = 0;
-	reminder = 1;
+	tmp = 0;
+	m = 1;
 	while (ft_isspace(*str))
 		str++;
 	while (*str == '-' || *str == '+')
 		if (*str++ == '-')
-			reminder *= -1;
+			m *= -1;
 	while (*str >= '0' && *str <= '9')
-		result = result * 10 + (*str++ - '0');
-	return (result * reminder);
+		tmp = tmp * 10 + (*str++ - '0');
+	return (tmp * m);
 }

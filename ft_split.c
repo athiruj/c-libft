@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_wordcount(const char *s, const char c);
 char	*ft_fword(const char *s, char c, size_t len);
