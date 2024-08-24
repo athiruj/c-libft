@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isgraph.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 13:56:07 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:56:08 by athi             ###   ########.fr       */
+/*   Created: 2024/08/24 15:12:54 by athi              #+#    #+#             */
+/*   Updated: 2024/08/24 16:42:51 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isgraph(const char c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	if (c >= 33 && c <= 126)
-		return (True);
-	return (False);
+	size_t	i;
+
+	i = 0;
+	while (*(s + i))
+	{
+		(*f)(i, &*(s + i));
+		i++;
+	}
 }

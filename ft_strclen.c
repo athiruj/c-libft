@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isgraph.c                                       :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 13:56:07 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:56:08 by athi             ###   ########.fr       */
+/*   Created: 2024/08/24 14:01:57 by athi              #+#    #+#             */
+/*   Updated: 2024/08/24 14:01:59 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isgraph(const char c)
+size_t	ft_strclen(const char *str, const char c)
 {
-	if (c >= 33 && c <= 126)
-		return (True);
-	return (False);
+	size_t	i;
+
+	i = 0;
+	while (*str != c || *str++)
+		i++;
+	return (i);
 }

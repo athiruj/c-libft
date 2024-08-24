@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/24 13:58:14 by athi              #+#    #+#             */
+/*   Updated: 2024/08/24 16:16:41 by athi             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_wordcount(const char *s, const char c);
-char	*ft_fword(const char *s, char c, size_t len);
+char	*ft_fword(const char *s, size_t len);
 void	*ft_free(char **arr, size_t n);
 
 char	**ft_split(const char *s, char c)
@@ -26,7 +38,7 @@ char	**ft_split(const char *s, char c)
 			len++;
 			s++;
 		}
-		*(tmp_arr + i) = ft_fword(s - len, c, len);
+		*(tmp_arr + i) = ft_fword(s - len, len);
 		if (!(*(tmp_arr + i++)))
 			return (ft_free(tmp_arr, ft_wordcount(s, c)));
 	}
@@ -54,7 +66,7 @@ size_t	ft_wordcount(const char *s, const char c)
 	return (i);
 }
 
-char	*ft_fword(const char *s, char c, size_t len)
+char	*ft_fword(const char *s, size_t len)
 {
 	char	*tmp;
 	size_t	i;
