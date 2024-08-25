@@ -6,7 +6,7 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:57:53 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 16:06:29 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/25 16:13:27 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	if (!n)
 		return (NULL);
 	tstr = (char *)str;
+	c = (unsigned char)c;
 	while (*tstr != c && --n)
 		tstr++;
 	if (*tstr != c)
