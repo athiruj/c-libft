@@ -6,15 +6,15 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:56:04 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:56:05 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 22:45:36 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isdigit(const char c)
+int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 58)
-		return (True);
-	return (False);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }

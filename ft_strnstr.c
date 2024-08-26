@@ -6,7 +6,7 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:02:46 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 16:09:00 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/25 19:06:02 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 
 	if (!*needle)
 		return ((char *)haystack);
-	i = ft_strnlen(needle, n);
+	if (!n)
+		return (0);
+	i = ft_strlen(needle);
 	while (n >= i
 		&& *haystack
 		&& ft_strncmp((char *)haystack, (char *)needle, i))

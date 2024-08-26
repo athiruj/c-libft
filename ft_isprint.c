@@ -6,15 +6,15 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:57:31 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:57:32 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 22:06:42 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isprint(const char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return (True);
-	return (False);
+		return (1);
+	return (0);
 }

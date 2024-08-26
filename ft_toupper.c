@@ -6,13 +6,13 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:03:04 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 14:03:20 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 23:08:51 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (ft_islower(c))
 		c -= 32;

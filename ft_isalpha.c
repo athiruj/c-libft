@@ -6,15 +6,15 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:55:53 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:55:54 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 22:06:37 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isalpha(const char c)
+int	ft_isalpha(int c)
 {
 	if (ft_islower(c) || ft_isupper(c))
-		return (True);
-	return (False);
+		return (1);
+	return (0);
 }

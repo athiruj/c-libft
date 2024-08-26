@@ -6,17 +6,17 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:57:45 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:57:47 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 22:06:44 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isxdigit(const char c)
+int	ft_isxdigit(int c)
 {
 	if (ft_isdigit(c)
 		|| (c >= 65 && c <= 70)
 		|| (c >= 97 && c <= 102))
-		return (True);
-	return (False);
+		return (1);
+	return (0);
 }

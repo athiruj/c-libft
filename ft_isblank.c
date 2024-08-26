@@ -6,15 +6,15 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:55:59 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:56:00 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 22:06:39 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isblank(const char c)
+int	ft_isblank(int c)
 {
 	if (c == 9 || c == 32)
-		return (True);
-	return (False);
+		return (1);
+	return (0);
 }

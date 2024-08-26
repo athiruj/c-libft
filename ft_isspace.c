@@ -6,15 +6,15 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:57:38 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:57:40 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 22:06:43 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isspace(const char c)
+int	ft_isspace(int c)
 {
 	if (c == 9 || (c >= 10 && c <= 13) || c == 32)
-		return (True);
-	return (False);
+		return (1);
+	return (0);
 }

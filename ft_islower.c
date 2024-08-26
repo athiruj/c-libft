@@ -6,15 +6,15 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:56:11 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:57:25 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 22:06:42 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_islower(const char c)
+int	ft_islower(int c)
 {
 	if (c >= 97 && c <= 122)
-		return (True);
-	return (False);
+		return (1);
+	return (0);
 }

@@ -6,15 +6,15 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:57:42 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:57:43 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 22:06:44 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isupper(const char c)
+int	ft_isupper(int c)
 {
 	if (c >= 65 && c <= 90)
-		return (True);
-	return (False);
+		return (1);
+	return (0);
 }

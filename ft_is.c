@@ -6,19 +6,19 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:55:44 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:55:46 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/24 17:20:48 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_is(const char c, const char *set)
+int	ft_is(const char c, const char *set)
 {
-	t_bool	sta;
+	int	sta;
 
-	sta = False;
+	sta = 0;
 	while (*set)
 		if (c == *set++)
-			return (True);
+			return (1);
 	return (sta);
 }
