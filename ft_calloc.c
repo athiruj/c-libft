@@ -6,7 +6,7 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:55:40 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 16:14:25 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/26 17:15:14 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*tmp;
-	size_t			i;
 
+	if (!count || !size)
+		return (malloc(0));
+	if (count > SIZE_MAX / size)
+		return (NULL);
 	tmp = malloc(count * size);
 	if (!tmp)
 		return (NULL);
-	i = 0;
-	while (i < count * size)
-		*(tmp + i++) = 0;
+	ft_bzero(tmp, count * size);
 	return (tmp);
 }
