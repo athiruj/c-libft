@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 14:02:50 by athi              #+#    #+#             */
-/*   Updated: 2024/08/25 15:57:26 by athi             ###   ########.fr       */
+/*   Created: 2024/08/24 14:02:54 by athi              #+#    #+#             */
+/*   Updated: 2024/08/24 14:02:55 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	char	*tstr;
+	char	*tmp;
+	size_t	i;
 
-	c = (unsigned char)c;
-	tstr = (char *)str + ft_strlen(str);
-	while (*tstr != c && *str++)
-		tstr--;
-	if (*tstr != c)
+	if (!s1)
+		return (ft_strdup(""));
+	tmp = (char *)s1;
+	while (*s1 && ft_is(*s1, set))
+		s1++;
+	i = ft_strlen(s1);
+	while (i && ft_is(*(s1 + i - 1), set))
+		i--;
+	tmp = malloc(i + 1);
+	if (!tmp)
 		return (NULL);
-	return (tstr);
+	ft_strncpy(tmp, s1, i);
+	*(tmp + i) = '\0';
+	return (tmp);
 }
