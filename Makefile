@@ -55,7 +55,12 @@ SRCSFILE 	= 	ft_isalpha.c \
 				ft_memcpy.c \
 				ft_memmove.c \
 				ft_memchr.c \
-		 	 	ft_memcmp.c 
+		 	 	ft_memcmp.c \
+				\
+				ft_putchar_fd.c \
+				ft_putstr_fd.c \
+				ft_putnbr_fd.c \
+				ft_putendl_fd.c
 			
 OBJS 		=	$(SRCSFILE:.c=.o)
 HEADER 		= 	libft.h
