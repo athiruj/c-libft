@@ -10,7 +10,6 @@ SRCSFILE 	= 	ft_isalpha.c \
 				ft_isascii.c \
 				ft_isprint.c \
 				\
-		 	 	ft_is.c \
 				ft_isblank.c \
 				ft_iscntrl.c \
 				ft_isgraph.c \
