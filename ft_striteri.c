@@ -6,7 +6,7 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 15:12:54 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 16:42:51 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/27 10:13:27 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 
 	i = 0;
-	while (*(s + i))
+	while (s && *(s + i))
 	{
 		(*f)(i, &*(s + i));
 		i++;

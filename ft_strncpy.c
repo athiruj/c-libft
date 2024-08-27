@@ -6,7 +6,7 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:02:40 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 14:02:41 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/27 10:10:55 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	size_t	i;
 
-	if (!src || !n)
+	if (!src && !n)
 		return (dst);
 	i = 0;
 	while (*src && i < n)
