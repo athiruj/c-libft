@@ -6,11 +6,11 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 10:33:55 by athi              #+#    #+#             */
-/*   Updated: 2024/08/27 12:45:37 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/27 22:11:31 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
