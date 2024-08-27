@@ -6,11 +6,13 @@
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:02:54 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 14:02:55 by athi             ###   ########.fr       */
+/*   Updated: 2024/08/27 13:53:04 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_is(const char c, const char *set);
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
@@ -31,4 +33,15 @@ char	*ft_strtrim(const char *s1, const char *set)
 	ft_strncpy(tmp, s1, i);
 	*(tmp + i) = '\0';
 	return (tmp);
+}
+
+int	ft_is(const char c, const char *set)
+{
+	int	sta;
+
+	sta = 0;
+	while (*set)
+		if (c == *set++)
+			return (1);
+	return (sta);
 }
