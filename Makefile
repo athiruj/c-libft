@@ -1,4 +1,3 @@
-# COMPILER #
 CC			=	cc
 CCFLAGS		=	-Wall -Wextra -Werror -std=c99
 AR			=	ar -src
@@ -59,24 +58,36 @@ SRCSFILE 	= 	ft_isalpha.c \
 				ft_putchar_fd.c \
 				ft_putstr_fd.c \
 				ft_putnbr_fd.c \
-				ft_putendl_fd.c
+				ft_putendl_fd.c \
+				
+BONUSFILE	=	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c
 			
 OBJS 		=	$(SRCSFILE:.c=.o)
+BONUSOBJS	=	$(BONUSFILE:.c=.o)
 HEADER 		= 	libft.h
 NAME 		=	libft.a
-
-# RULE #
 
 all:	$(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $@ $(OBJS)
 
+bonus: $(OBJS) $(BONUSOBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUSOBJS)
+
 %.o: %.c libft.h Makefile
 	$(CC) $(CCFLAGS) -I $(HEADER) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUSOBJS)
 
 fclean: clean
 	$(RM) $(NAME)
