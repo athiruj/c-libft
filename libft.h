@@ -40,11 +40,12 @@ int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_isxdigit(int c);
 
-/* ! Required conversion */
+/* ! Required converter */
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
-/* * Additional conversion */
+
+/* * Additional converter */
 char	*ft_itoa(int n);
 
 /* ! Required str */
