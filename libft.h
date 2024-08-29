@@ -51,7 +51,7 @@ char	*ft_itoa(int n);
 /* ! Required str */
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
-size_t	ft_strlcpy(char *dst, char *src, size_t n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
