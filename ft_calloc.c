@@ -17,7 +17,7 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*tmp;
 
 	if (!count || !size)
-		return (malloc(0));
+		return (malloc(1));
 	if (count > INT_MAX / size)
 		return (NULL);
 	tmp = malloc(count * size);

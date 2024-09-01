@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iscntrl.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 13:56:02 by athi              #+#    #+#             */
-/*   Updated: 2024/08/25 17:18:35 by athi             ###   ########.fr       */
+/*   Created: 2024/08/27 15:21:27 by athi              #+#    #+#             */
+/*   Updated: 2024/08/27 15:45:42 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_iscntrl(int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if ((c >= 0 && c <= 31) || c == 127)
-		return (1);
-	return (0);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }

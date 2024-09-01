@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 14:01:50 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 14:01:51 by athi             ###   ########.fr       */
+/*   Created: 2024/08/27 15:26:14 by athi              #+#    #+#             */
+/*   Updated: 2024/08/27 22:06:18 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dst, const char *src)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
+	t_list	*new;
+	t_list	*obj;
 
-	i = ft_strlen(dst);
-	while (*src)
-		*(dst + i++) = *src++;
-	*(dst + i) = '\0';
-	return (dst);
+	if (!lst || !f ||!del)
+		return (NULL);
+	new = NULL;
+	while (lst)
+	{
+		obj = ft_lstnew(f(lst->content));
+		if (!obj)
+		{
+			ft_lstclear(&new, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new, obj);
+		lst = lst->next;
+	}
+	return (new);
 }

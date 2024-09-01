@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ispunct.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 13:57:35 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 22:06:43 by athi             ###   ########.fr       */
+/*   Created: 2024/08/27 14:12:29 by athi              #+#    #+#             */
+/*   Updated: 2024/08/27 14:23:37 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ispunct(int c)
+t_list	*ft_lstnew(void *content)
 {
-	if ((c >= 33 && c <= 47)
-		|| (c >= 58 && c <= 64)
-		|| (c >= 91 && c <= 96)
-		|| (c >= 123 && c <= 126))
-		return (1);
-	return (0);
+	t_list	*new;
+
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

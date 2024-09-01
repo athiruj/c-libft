@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 14:02:05 by athi              #+#    #+#             */
-/*   Updated: 2024/08/27 13:32:17 by athi             ###   ########.fr       */
+/*   Created: 2024/08/27 15:25:08 by athi              #+#    #+#             */
+/*   Updated: 2024/08/27 21:48:29 by athi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char	*tdst;
-
-	tdst = dst;
-	while (*src)
-		*tdst++ = *src++;
-	*tdst = '\0';
-	return (dst);
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

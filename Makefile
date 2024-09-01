@@ -1,5 +1,5 @@
 CC			=	cc
-CCFLAGS		=	-Wall -Wextra -Werror -std=c99
+CCFLAGS		=	-Wall -Wextra -Werror
 AR			=	ar -src
 RM			=	rm -rf
 
@@ -59,6 +59,16 @@ SRCSFILE 	= 	ft_isalpha.c \
 				ft_putstr_fd.c \
 				ft_putnbr_fd.c \
 				ft_putendl_fd.c \
+				
+BONUSFILE	=	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c
 			
 OBJS 		=	$(SRCSFILE:.c=.o)
 BONUSOBJS	=	$(BONUSFILE:.c=.o)
