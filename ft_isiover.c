@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isiover.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atkaewse <atkaewse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/24 13:56:04 by athi              #+#    #+#             */
-/*   Updated: 2024/10/20 00:03:38 by atkaewse         ###   ########.fr       */
+/*   Created: 2024/10/19 22:38:22 by atkaewse          #+#    #+#             */
+/*   Updated: 2024/10/19 23:46:30 by atkaewse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isdigit(int c)
+t_bool	ft_isiover(const char *str)
 {
-	if (c >= 48 && c <= 57)
+	if (ft_atol(str) > INT_MAX && ft_atol(str) < INT_MIN)
 		return (True);
 	return (False);
 }

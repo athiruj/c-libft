@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: atkaewse <atkaewse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:52:33 by athi              #+#    #+#             */
-/*   Updated: 2024/08/29 21:57:50 by athi             ###   ########.fr       */
+/*   Updated: 2024/10/20 00:23:06 by atkaewse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <unistd.h>
 # include <limits.h>
 
+typedef enum e_bool
+{
+	True = 1,
+	False = 0
+}	t_bool;
+
 typedef struct s_list
 {
 	void			*content;
@@ -24,26 +30,30 @@ typedef struct s_list
 }	t_list;
 
 /* ! Required is */
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
+t_bool	ft_isalpha(int c);
+t_bool	ft_isdigit(int c);
+t_bool	ft_isalnum(int c);
+t_bool	ft_isascii(int c);
+t_bool	ft_isprint(int c);
 
 /* ? My Additional is */
-int		ft_isblank(int c);
-int		ft_iscntrl(int c);
-int		ft_isgraph(int c);
-int		ft_ispunct(int c);
-int		ft_isspace(int c);
-int		ft_islower(int c);
-int		ft_isupper(int c);
-int		ft_isxdigit(int c);
+t_bool	ft_isblank(int c);
+t_bool	ft_iscntrl(int c);
+t_bool	ft_isgraph(int c);
+t_bool	ft_ispunct(int c);
+t_bool	ft_isspace(int c);
+t_bool	ft_islower(int c);
+t_bool	ft_isupper(int c);
+t_bool	ft_isxdigit(int c);
+/* is integer overflow */
+t_bool	ft_isiover(const char *str);
 
 /* ! Required converter */
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
+/* alphabet to long */
+long	ft_atol(const char *str);
 
 /* * Additional converter */
 char	*ft_itoa(int n);

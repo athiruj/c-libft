@@ -3,16 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: atkaewse <atkaewse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:02:54 by athi              #+#    #+#             */
-/*   Updated: 2024/08/27 13:53:04 by athi             ###   ########.fr       */
+/*   Updated: 2024/10/20 00:14:53 by atkaewse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is(const char c, const char *set);
+static int	ft_is(const char c, const char *set)
+{
+	int	sta;
+
+	sta = 0;
+	while (*set)
+		if (c == *set++)
+			return (1);
+	return (sta);
+}
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
@@ -33,15 +42,4 @@ char	*ft_strtrim(const char *s1, const char *set)
 	ft_strncpy(tmp, s1, i);
 	*(tmp + i) = '\0';
 	return (tmp);
-}
-
-int	ft_is(const char c, const char *set)
-{
-	int	sta;
-
-	sta = 0;
-	while (*set)
-		if (c == *set++)
-			return (1);
-	return (sta);
 }

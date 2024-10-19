@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: atkaewse <atkaewse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:57:49 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 13:57:50 by athi             ###   ########.fr       */
+/*   Updated: 2024/10/20 00:10:48 by atkaewse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_nbrlen(int nbr)
+static size_t	ft_nbrlen(int nbr)
 {
 	size_t	len;
 
@@ -26,7 +26,7 @@ size_t	ft_nbrlen(int nbr)
 	return (len);
 }
 
-int	ft_abs(int nbr)
+static int	ft_abs(int nbr)
 {
 	if (nbr < 0)
 		return (nbr *= -1);

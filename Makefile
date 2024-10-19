@@ -17,10 +17,12 @@ SRCSFILE 	= 	ft_isalpha.c \
 				ft_islower.c \
 				ft_isupper.c \
 				ft_isxdigit.c \
+				ft_isiover.c \
 				\
 		 	 	ft_toupper.c \
 				ft_tolower.c \
 				ft_atoi.c \
+				ft_atol.c \
 				\
 				ft_itoa.c \
 				\

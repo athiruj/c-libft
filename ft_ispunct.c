@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ispunct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: atkaewse <atkaewse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:57:35 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 22:06:43 by athi             ###   ########.fr       */
+/*   Updated: 2024/10/20 00:04:34 by atkaewse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ispunct(int c)
+t_bool	ft_ispunct(int c)
 {
 	if ((c >= 33 && c <= 47)
 		|| (c >= 58 && c <= 64)
 		|| (c >= 91 && c <= 96)
 		|| (c >= 123 && c <= 126))
-		return (1);
-	return (0);
+		return (True);
+	return (False);
 }

@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isxdigit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: atkaewse <atkaewse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:57:45 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 22:06:44 by athi             ###   ########.fr       */
+/*   Updated: 2024/10/20 00:05:18 by atkaewse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isxdigit(int c)
+t_bool	ft_isxdigit(int c)
 {
 	if (ft_isdigit(c)
 		|| (c >= 65 && c <= 70)
 		|| (c >= 97 && c <= 102))
-		return (1);
-	return (0);
+		return (True);
+	return (False);
 }

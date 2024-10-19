@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isgraph.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: athi <athi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: atkaewse <atkaewse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 13:56:07 by athi              #+#    #+#             */
-/*   Updated: 2024/08/24 22:06:41 by athi             ###   ########.fr       */
+/*   Updated: 2024/10/20 00:01:46 by atkaewse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isgraph(int c)
+t_bool	ft_isgraph(int c)
 {
 	if (c >= 33 && c <= 126)
-		return (1);
-	return (0);
+		return (True);
+	return (False);
 }
